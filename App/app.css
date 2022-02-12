@@ -1,0 +1,81 @@
+:root {
+    --green-color: #125430;
+    --white-color: #ffffff;
+    --orange-color: #eb7400;
+    --gray-color: #222222;
+    --black-color: #141414;
+    --text-color: #666666;
+    --leftpx: 299px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+.active {
+    display: block!important;
+}
+
+.non_active {
+    display: none!important;
+}
+
+.line_tab {
+    position: relative;
+    color: var(--green-color);
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+}
+
+.line_tab::after {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 0;
+    width: auto;
+    height: 2.79px;
+    background-color: #222;
+    content: "";
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    animation: growLine 0.3s linear;
+    -webkit-animation: growLine 0.3s linear;
+}
+
+@keyframes growLine {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+input:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+input:active {
+    color: black;
+}
+
+.swiper-slide {
+    position: relative!important;
+}
