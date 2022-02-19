@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: azure;
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+    justify-content: center;
+}
+
+.card_product {
+    width: 40rem;
+    height: 100%;
+    background-color: #fff;
+    padding: 15px;
+    transition: all 0.25s ease;
+    -webkit-transition: all 0.25s ease;
+    -moz-transition: all 0.25s ease;
+    -ms-transition: all 0.25s ease;
+    -o-transition: all 0.25s ease;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.card_product:hover>.card {
+    outline: none;
+}
+
+.card_product:hover {
+    outline: 2px solid black;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: 2px solid gray;
+    transition: all 0.25s linear;
+    -webkit-transition: all 0.25s linear;
+    -moz-transition: all 0.25s linear;
+    -ms-transition: all 0.25s linear;
+    -o-transition: all 0.25s linear;
+}
+
+.card_img {
+    padding: 10px 50px;
+}
+
+.card_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_content {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.name {
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.price {
+    font-size: 15px;
+}
+
+.card_preview {
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    border: none;
+    outline: none;
+}
+
+.card_preview {
+    display: none;
+}
+
+.open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.7s ease;
+    -webkit-animation: fadeIn 0.7s ease;
+    will-change: opacity;
+    transition: opacity 0.5s linear;
+    -webkit-transition: opacity 0.5s linear;
+    -moz-transition: opacity 0.5s linear;
+    -ms-transition: opacity 0.5s linear;
+    -o-transition: opacity 0.5s linear;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(-1094px);
+        -webkit-transform: translateX(-1094px);
+        -moz-transform: translateX(-1094px);
+        -ms-transform: translateX(-1094px);
+        -o-transform: translateX(-1094px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+        -o-transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.preview-product {
+    --width: 35rem;
+    --height: 55rem;
+    width: var(--width);
+    height: var(--height);
+    background-color: seashell;
+    text-align: center;
+}
+
+.preview_icon {
+    float: right;
+    font-size: 30px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.preview_product-img {
+    padding: 15px;
+}
+
+.preview_product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview_name-product {
+    color: rgb(13, 184, 236);
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-flex;
+    gap: 0 3px;
+}
+
+.preview_feebback {
+    padding: 10px 0;
+    font-size: 1.7rem;
+}
+
+#icon_star {
+    color: green;
+}
+
+.preview_text {
+    padding: 7px;
+    font-weight: 500;
+    color: rgb(27, 24, 23);
+    font-size: 1.5rem;
+}
+
+.preview_price {
+    font-size: 2rem;
+    color: rgb(26, 211, 211);
+    font-weight: 400;
+}
+
+.preview_btn {
+    display: flex;
+    justify-content: center;
+    gap: 0 10px;
+    padding: 10px;
+}
+
+#preview_buy,
+#preview_add {
+    cursor: pointer;
+    transition: all .25 linear;
+    -webkit-transition: all .25 linear;
+    -moz-transition: all .25 linear;
+    -ms-transition: all .25 linear;
+    -o-transition: all .25 linear;
+}
+
+#preview_buy {
+    width: 15rem;
+    height: 4rem;
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+}
+
+#preview_buy:hover {
+    background-color: black;
+    color: #fff;
+    border: 1px solid black;
+}
+
+#preview_add:hover {
+    background-color: #fff;
+    color: black;
+    border: 1px solid black;
+}
+
+#preview_add {
+    width: 15rem;
+    height: 4rem;
+    background-color: black;
+    color: #fff;
+    border: 1px solid black;
+}
+
+
+/* responsive */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .card_product {
+        width: 29rem;
+    }
+    html {
+        font-size: 50%;
+    }
+    .card_container {
+        gap: 5rem 2rem;
+        margin-top: 3rem;
+    }
+    .preview-product {
+        height: 60rem;
+    }
+}
